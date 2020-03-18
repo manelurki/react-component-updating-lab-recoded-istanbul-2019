@@ -10,11 +10,20 @@ class Timer extends Component {
     };
   }
 
+<<<<<<< HEAD
   
   componentDidUpdate() {
     this.timer.current.style.color = "#" + Math.floor(Math.random() * 1677215).toString(16);
   }
   
+=======
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state.time === nextState.time) {
+      return false
+    }
+    return true
+  }
+>>>>>>> 49093c2485f26abf371f12d2f3188e51aec86a7a
 //Your code here
   componentDidMount() {
     this.interval = setInterval(
